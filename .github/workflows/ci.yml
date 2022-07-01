@@ -4,6 +4,7 @@ on:
 
 jobs:
   perl:
+    runs-on: ubuntu-latest
     container:
       image: perl:sha256:5cbbc12a9e1719e7cabb5fdd10245ac6ddf93909cf89c2ae34e8ea483724c46e
     steps:
@@ -11,5 +12,3 @@ jobs:
       - run: |
           cpanm -nq --dev Carmel
           carmel install
-          
-          
